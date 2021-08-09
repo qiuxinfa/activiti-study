@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="891c1e5b-2049-41db-98e4-9a754dc5b622" name="Default" comment="" />
+    <list default="true" id="891c1e5b-2049-41db-98e4-9a754dc5b622" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/ActivitiApp.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/cmd/AddMultiInstanceCmd.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/cmd/JumpCmd.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyActivitiConfig.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$10.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$11.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$12.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$13.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$14.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$15.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$16.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$17.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$18.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$19.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$20.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$21.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$22.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$3.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$4.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$5.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$6.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$7.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$8.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$9.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$ActivityDrawInstruction.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator$ArtifactDrawInstruction.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/config/MyProcessDiagramGenerator.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/controller/DeployController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/controller/ProcessDesignController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/controller/PublishExamController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/controller/TaskController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/controller/TestController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/controller/TestHuiqian.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/controller/TestJumpController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/controller/TestListenerController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/dto/ActDeploymentDTO.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/dto/ModelDTO.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/listener/HuiQianTaskListener.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/listener/MyExecutionListener.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/listener/MyJavaDelegate.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/listener/MyTaskListener.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qxf/util/ActivitiUtil.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/processes/test.bpmn20.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/processes/testEvent.bpmn20.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/processes/testJump.bpmn" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/processes/test_huiqian.bpmn20.xml" afterPath="" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +83,8 @@
       <file leaf-file-name="DeployController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/qxf/controller/DeployController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+            <state relative-caret-position="269">
+              <caret line="86" column="32" lean-forward="false" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -86,6 +136,9 @@
       <find>_7</find>
       <find>isActiviti5CompatibilityEnabled</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -621,6 +674,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -650,96 +704,6 @@
               <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
               <item name="activiti-study" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="activiti-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="activiti-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="activiti-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qxf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="activiti-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qxf" type="462c0819:PsiDirectoryNode" />
-              <item name="cmd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="activiti-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qxf" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="activiti-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qxf" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="activiti-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qxf" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="activiti-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qxf" type="462c0819:PsiDirectoryNode" />
-              <item name="listener" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="activiti-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="qxf" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="activiti-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="activiti-study" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="processes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="activiti-study" type="b2602c69:ProjectViewProjectNode" />
@@ -932,12 +896,12 @@
       <workItem from="1628298357497" duration="3674000" />
       <workItem from="1628409895393" duration="6686000" />
       <workItem from="1628438088051" duration="803000" />
-      <workItem from="1628508470733" duration="5369000" />
+      <workItem from="1628508470733" duration="5983000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95793000" />
+    <option name="totallyTimeSpent" value="96407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -948,7 +912,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45670995" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43614718" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1409,7 +1373,7 @@
         <state relative-caret-position="374">
           <caret line="202" column="32" lean-forward="false" selection-start-line="202" selection-start-column="32" selection-end-line="202" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1496,8 +1460,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/qxf/controller/DeployController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="84" column="0" lean-forward="true" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
+        <state relative-caret-position="269">
+          <caret line="86" column="32" lean-forward="false" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
           <folding />
         </state>
       </provider>
