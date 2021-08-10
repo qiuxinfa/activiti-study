@@ -43,8 +43,8 @@ public class TestListenerController {
     @Autowired
     private RepositoryService repositoryService;
 
-    @GetMapping("/publish")
-    public String publishExam(String userId){
+    @GetMapping("/start")
+    public String start(String userId){
         // 设置流程启动人
         identityService.setAuthenticatedUserId(userId);
         // 通过流程key启动流程

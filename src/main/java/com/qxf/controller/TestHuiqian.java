@@ -34,31 +34,11 @@ public class TestHuiqian {
     @Autowired
     private RuntimeService runtimeService;
 
-    @GetMapping("/other")
-    public void other(){
-        List<Task> tasks = taskService.createTaskQuery().taskAssignee("王五").list();
-        Map<String,Object> applyMap = new HashMap<>(2);
-        applyMap.put("isApply","true");
-        applyMap.put("agreeCnt",3);
-        applyMap.put("leader","qxf");
-        for (Task task : tasks){
-//            taskService.complete(task.getId(),applyMap);
-        }
-        List<Task> leaderTasks = taskService.createTaskQuery().taskAssignee("qxf").list();
-
-        applyMap.put("leaderAudit","true");
-        if (!StringUtils.isEmpty(leaderTasks)){
-            for (Task task : leaderTasks) {
-                taskService.complete(task.getId(),applyMap);
-            }
-        }
-    }
-
     @GetMapping("/testHuiqian")
     public void testHuiqian(){
         // 流程id
         String key = "test_huiqian_2";
-        boolean testAddInstance = true;  // 测试添加会签人员，开关
+        boolean testAddInstance = false;  // 测试添加会签人员，开关
         // 申请人列表
         List<String> applyUserList = new ArrayList<>(3);
         applyUserList.add("张三");
@@ -112,7 +92,7 @@ public class TestHuiqian {
         applyMap.clear();
 
         List<Task> leaderTasks = taskService.createTaskQuery().taskAssignee("qxf").list();
-        applyMap.put("leaderAudit","true");
+        applyMap.put("leaderAudit","false");
         if (!StringUtils.isEmpty(leaderTasks)){
             for (Task task : leaderTasks) {
                 taskService.complete(task.getId(),applyMap);

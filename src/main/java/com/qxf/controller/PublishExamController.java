@@ -112,22 +112,12 @@ public class PublishExamController {
                 highLightedActivitiIds.add(historicActivityInstance.getActivityId());
             }
 
-            List<HistoricProcessInstance> historicFinishedProcessInstances = historyService.createHistoricProcessInstanceQuery().processInstanceId(processInstanceId).finished()
-                    .list();
-            ProcessDiagramGenerator processDiagramGenerator = processEngine.getProcessEngineConfiguration().getProcessDiagramGenerator();
-//            // 如果还没完成，流程图高亮颜色为绿色，如果已经完成为红色
-//            if (!CollectionUtils.isEmpty(historicFinishedProcessInstances)) {
-//                // 如果不为空，说明已经完成
-//                processDiagramGenerator =
-//            } else {
-//                processDiagramGenerator = new CustomProcessDiagramGenerator();
-//            }
-
             BpmnModel bpmnModel = repositoryService.getBpmnModel(historicProcessInstance.getProcessDefinitionId());
             // 高亮流程已发生流转的线id集合
             List<String> highLightedFlowIds = getHighLightedFlows(bpmnModel, historicActivityInstances);
 
             // 使用默认配置获得流程图表生成器，并生成追踪图片字符流
+            ProcessDiagramGenerator processDiagramGenerator = processEngine.getProcessEngineConfiguration().getProcessDiagramGenerator();
             InputStream imageStream = processDiagramGenerator.generateDiagram(bpmnModel, "png", highLightedActivitiIds, highLightedFlowIds, "宋体", "微软雅黑", "黑体", null, 2.0);
             OutputStream outputStream = response.getOutputStream();
             // 输出图片内容
@@ -160,13 +150,14 @@ public class PublishExamController {
         for (HistoricActivityInstance historicActivityInstance : historicActivityInstances) {
             FlowNode flowNode = (FlowNode) bpmnModel.getMainProcess().getFlowElement(historicActivityInstance.getActivityId(), true);
             historicActivityNodes.add(flowNode);
+            // 结束时间不为空，则是已完成节点
             if (historicActivityInstance.getEndTime() != null) {
                 finishedActivityInstances.add(historicActivityInstance);
             }
         }
 
-        FlowNode currentFlowNode = null;
-        FlowNode targetFlowNode = null;
+        FlowNode currentFlowNode;
+        FlowNode targetFlowNode;
         // 遍历已完成的活动实例，从每个实例的outgoingFlows中找到已执行的
         for (HistoricActivityInstance currentActivityInstance : finishedActivityInstances) {
             // 获得当前活动对应的节点信息及outgoingFlows信息
@@ -174,7 +165,9 @@ public class PublishExamController {
             List<SequenceFlow> sequenceFlows = currentFlowNode.getOutgoingFlows();
 
             /**
-             * 遍历outgoingFlows并找到已已流转的 满足如下条件认为已已流转： 1.当前节点是并行网关或兼容网关，则通过outgoingFlows能够在历史活动中找到的全部节点均为已流转 2.当前节点是以上两种类型之外的，通过outgoingFlows查找到的时间最早的流转节点视为有效流转
+             * 遍历outgoingFlows并找到已流转的 满足如下条件认为已已流转：
+             * 1.当前节点是并行网关或兼容网关，则通过outgoingFlows能够在历史活动中找到的全部节点均为已流转
+             * 2.当前节点是以上两种类型之外的，通过outgoingFlows查找到的时间最早的流转节点视为有效流转
              */
             if ("parallelGateway".equals(currentActivityInstance.getActivityType()) || "inclusiveGateway".equals(currentActivityInstance.getActivityType())) {
                 // 遍历历史活动节点，找到匹配流程目标节点的

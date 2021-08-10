@@ -1,7 +1,11 @@
 package com.qxf.controller;
 
 import com.qxf.cmd.JumpCmd;
+import org.activiti.bpmn.model.BpmnModel;
+import org.activiti.bpmn.model.FlowElement;
+import org.activiti.bpmn.model.UserTask;
 import org.activiti.engine.ManagementService;
+import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
 import org.activiti.engine.runtime.ProcessInstance;
@@ -10,8 +14,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 /**
  * @ClassName TestJumpController
@@ -29,6 +36,9 @@ public class TestJumpController {
 
     @Autowired
     private ManagementService managementService;
+
+    @Autowired
+    private RepositoryService repositoryService;
 
     @GetMapping("/jump")
     public void jump(){
@@ -67,6 +77,20 @@ public class TestJumpController {
         }else {
             taskService.complete(task.getId());
         }
+    }
 
+    /**
+     *获取所有的用户任务
+     */
+    @GetMapping("/getAllFlowElements")
+    public List<FlowElement> getAllFlowElements(String processDefinitionId){
+        // 根据流程定义，获取BpmnModel，BpmnModel其实就是流程定义的Java表现形式
+        BpmnModel bpmnModel = repositoryService.getBpmnModel(processDefinitionId);
+        // 获取所有的元素
+        Collection<FlowElement> flowElements = bpmnModel.getMainProcess().getFlowElements();
+        // 过滤出用户任务
+        List<FlowElement> userTasks = flowElements.stream().filter(e -> e instanceof UserTask)
+                                                 .collect(Collectors.toList());
+        return userTasks;
     }
 }

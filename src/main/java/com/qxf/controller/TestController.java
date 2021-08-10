@@ -17,7 +17,7 @@ import java.util.Map;
 
 /**
  * @ClassName TestController
- * @Description TODO
+ * @Description 监听器测试
  * @Author qiuxinfa
  * @Date 2021/7/8 22:51
  **/
@@ -41,8 +41,12 @@ public class TestController {
         // 设置流程启动人
         identityService.setAuthenticatedUserId(userId);
         // 通过流程key启动流程
-        ProcessInstance instance = runtimeService.startProcessInstanceByKey(PROCESS_KEY);
-        return "流程启动成功，流程实例id = "+instance.getId();
+        ProcessInstance processInstance = runtimeService.startProcessInstanceByKey(PROCESS_KEY);
+//        // 挂起流程实例
+//        runtimeService.suspendProcessInstanceById(processInstance.getId());
+//        // 激活流程实例
+//        runtimeService.activateProcessInstanceById(processInstance.getId());
+        return "流程启动成功，流程实例id = "+processInstance.getId();
     }
 
     @GetMapping("/list")
@@ -55,6 +59,9 @@ public class TestController {
     public String claim(String taskId,String userId){
         // 任务签收
         taskService.claim(taskId,userId);
+        // setAssignee和claim两个的区别是在认领任务时，claim会检查该任务是否已经被认领，
+        // 如果被认领则会抛出ActivitiTaskAlreadyClaimedException 而setAssignee不会进行这样的检查。
+//        taskService.setAssignee(taskId,userId);
         // 完成任务，流转到下一个节点
         taskService.complete(taskId);
         return "任务签收成功！";
