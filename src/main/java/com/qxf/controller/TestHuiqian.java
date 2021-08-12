@@ -5,7 +5,7 @@ import org.activiti.engine.*;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.activiti.engine.task.Task;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.StringUtils;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -37,7 +37,7 @@ public class TestHuiqian {
     @GetMapping("/testHuiqian")
     public void testHuiqian(){
         // 流程id
-        String key = "test_huiqian_2";
+        String key = "test_huiqian_2";  // 并行多实例
         boolean testAddInstance = false;  // 测试添加会签人员，开关
         // 申请人列表
         List<String> applyUserList = new ArrayList<>(3);
@@ -92,8 +92,8 @@ public class TestHuiqian {
         applyMap.clear();
 
         List<Task> leaderTasks = taskService.createTaskQuery().taskAssignee("qxf").list();
-        applyMap.put("leaderAudit","false");
-        if (!StringUtils.isEmpty(leaderTasks)){
+        applyMap.put("leaderAudit","true");
+        if (!CollectionUtils.isEmpty(leaderTasks)){
             for (Task task : leaderTasks) {
                 taskService.complete(task.getId(),applyMap);
             }
